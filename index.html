@@ -6,6 +6,9 @@
     <title>Cocon de Soi - Massages Bien-Être à Lyon | Élodie Lambert</title>
     <meta name="description" content="Découvrez les massages bien-être d'Élodie Lambert à Lyon. Un cocon de sérénité pour retrouver le chemin vers vous. Rituels personnalisés, approche bienveillante.">
     
+    <!-- Balise pour l'aperçu sur les réseaux sociaux -->
+    <meta property="og:image" content="images/apercu-partage-social.webp">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -56,7 +59,7 @@
             'glow-shadow': '0 0 25px -5px rgba(166, 106, 63, 0.4)',
           },
           backgroundImage: {
-            'hero-wellness': "url('https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3847841c-b26a-493a-86a0-a7d1883738e4/hero-wellness.jpg')",
+            'hero-wellness': "url('images/hero-background.webp')",
             'soft-gradient': 'linear-gradient(180deg, #fbfaf9 0%, #f7f5f2 100%)',
             'wellness-gradient': 'linear-gradient(180deg, #f7f5f2 0%, #ede0d4 100%)',
             'hero-gradient': 'linear-gradient(135deg, #a66a3f 0%, #c39a7b 100%)',
@@ -87,6 +90,10 @@
       .soft-gradient { background-image: linear-gradient(180deg, #fbfaf9 0%, #f7f5f2 100%); }
       .wellness-gradient { background-image: linear-gradient(180deg, #f7f5f2 0%, #ede0d4 100%); }
       .wellness-shadow { box-shadow: 0 4px 20px rgba(86, 60, 41, 0.1); }
+      /* Ajout de la classe pour l'image de fond du Hero */
+      .hero-bg {
+        background-image: url('images/hero-background.webp');
+      }
       .nav-scrolled {
         background-color: rgba(251, 250, 249, 0.85);
         backdrop-filter: blur(8px);
@@ -136,7 +143,7 @@
                     
                     <!-- Mobile Menu Button (functionality not shown in video, so keeping it simple) -->
                     <button class="md:hidden transition-colors duration-300 text-white hover:bg-white/20 p-2 rounded-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                        <svg xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
                     </button>
                 </div>
             </div>
@@ -147,7 +154,7 @@
             Hero Section
             ================================================================== -->
             <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3847841c-b26a-493a-86a0-a7d1883738e4/hero-wellness.jpg');">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat hero-bg">
                     <div class="absolute inset-0 bg-wellness-deep/40"></div>
                 </div>
                 <div class="relative z-10 container mx-auto px-6 text-center text-white">
@@ -191,7 +198,7 @@
                             </div>
                             <div class="order-1 lg:order-2">
                                 <div class="p-0 overflow-hidden soft-shadow rounded-lg border bg-card text-card-foreground shadow-sm">
-                                    <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/232a59a7-a3aa-44f2-a279-798c56e2978f/elodie-portrait.jpg" alt="Élodie Lambert, masseuse bien-être à Lyon" class="w-full h-auto object-cover">
+                                    <img src="images/elodie-portrait.webp" alt="Élodie Lambert, masseuse bien-être à Lyon" class="w-full h-auto object-cover">
                                 </div>
                             </div>
                         </div>
@@ -332,7 +339,7 @@ Approach Section
                             <!-- Gallery Card 1 -->
                             <div class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden wellness-shadow hover:glow-shadow transition-all duration-500">
                                 <div class="aspect-[4/3] overflow-hidden">
-                                    <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3a79f046-6085-484a-9310-d021f1519d08/massage-room.jpg" alt="Salle de massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <img src="images/salle-massage.webp" alt="Salle de massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 </div>
                                 <div class="p-6 text-center">
                                     <h3 class="text-lg font-heading text-wellness-deep mb-2">Salle de massage</h3>
@@ -342,7 +349,7 @@ Approach Section
                             <!-- Gallery Card 2 -->
                             <div class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden wellness-shadow hover:glow-shadow transition-all duration-500">
                                 <div class="aspect-[4/3] overflow-hidden">
-                                    <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c1775e5f-1463-4903-b09e-7169f1025537/massage-details.jpg" alt="Soins naturels" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <img src="images/soins-naturels-details.webp" alt="Détails des soins naturels et huiles de massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 </div>
                                 <div class="p-6 text-center">
                                     <h3 class="text-lg font-heading text-wellness-deep mb-2">Soins naturels</h3>
@@ -352,7 +359,7 @@ Approach Section
                             <!-- Gallery Card 3 -->
                             <div class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden wellness-shadow hover:glow-shadow transition-all duration-500">
                                 <div class="aspect-[4/3] overflow-hidden">
-                                    <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/016e788c-9824-4f08-b769-93e130282121/consultation-area.jpg" alt="Espace d'échange" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <img src="images/espace-echange.webp" alt="Espace d'échange et de consultation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 </div>
                                 <div class="p-6 text-center">
                                     <h3 class="text-lg font-heading text-wellness-deep mb-2">Espace d'échange</h3>
