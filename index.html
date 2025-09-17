@@ -482,36 +482,135 @@ FAQ Section
     </div>
 </section>
 
-            <!-- =================================================================
+                        <!-- =================================================================
             Booking Section
             ================================================================== -->
             <section id="reservation" class="py-20 md:py-24 soft-gradient">
                 <div class="container mx-auto px-6">
-                    <div class="max-w-4xl mx-auto">
+                    <div class="max-w-5xl mx-auto">
                         <div class="text-center mb-16">
-                            <h2 class="text-3xl md:text-5xl font-heading mb-6 text-wellness-deep">C'est le moment de vous offrir cette pause</h2>
-                            <p class="text-lg text-muted-foreground max-w-3xl mx-auto">Réserver votre rituel n'a jamais été aussi simple. Choisissez simplement le soin et le créneau qui vous conviennent dans l'agenda ci-dessous. Vous recevrez une confirmation instantanément.</p>
+                            <h2 class="text-3xl md:text-5xl font-heading mb-6 text-wellness-deep">Prête à faire le premier pas ?</h2>
+                            <p class="text-lg text-muted-foreground max-w-3xl mx-auto">Je vous offre un appel découverte de 15 minutes pour échanger en toute sérénité. C'est l'occasion de faire connaissance, de poser vos questions et de voir ensemble comment je peux vous accompagner. C'est simple, gratuit et sans engagement.</p>
                         </div>
-                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm wellness-shadow">
-                            <div class="p-6 text-center bg-wellness-gradient rounded-t-lg">
-                                <h3 class="font-semibold tracking-tight text-2xl font-heading text-wellness-deep">Réservation en ligne</h3>
+                        
+                        <!-- Calendly Widget Start -->
+                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm wellness-shadow overflow-hidden relative">
+                            <!-- Calendly Badge -->
+                            <div class="absolute top-2 -right-10 z-10">
+                                <div class="w-32 h-8 bg-gray-800 flex items-center justify-center transform rotate-45">
+                                    <span class="text-white text-xs font-bold tracking-wider">Calendly</span>
+                                </div>
                             </div>
-                            <div class="p-8">
-                                <div class="bg-wellness-warm/10 rounded-lg p-8 md:p-12 text-center border-2 border-dashed border-wellness-sage/50">
-                                    <div class="space-y-4">
-                                        <div class="text-4xl">📅</div>
-                                        <h3 class="text-xl font-medium text-wellness-deep">Calendrier de réservation</h3>
-                                        <p class="text-foreground/70">L'agenda Calendly sera intégré ici pour permettre la réservation directe en ligne.</p>
-                                        <div class="space-y-3 text-sm text-left max-w-md mx-auto pt-4">
-                                            <div class="flex justify-between"><span class="text-foreground/80">Rituel "Cocon de Soi" (1h15)</span><span class="font-medium text-wellness-deep">90€</span></div>
-                                            <div class="flex justify-between"><span class="text-foreground/80">Pause "Sérénité" (45min)</span><span class="font-medium text-wellness-deep">60€</span></div>
-                                            <div class="flex justify-between"><span class="text-foreground/80">Rituel Pré-Natal (1h)</span><span class="font-medium text-wellness-deep">80€</span></div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+                                <!-- Left Panel: Information -->
+                                <div class="lg:col-span-2 p-8 border-r border-border flex flex-col space-y-4">
+                                    <img src="images/elodie-portrait.webp" alt="Portrait d'Élodie Lambert" class="w-24 h-24 rounded-full object-cover border-2 border-white shadow-md">
+                                    <div>
+                                        <p class="font-medium text-muted-foreground">Élodie Lambert</p>
+                                        <h3 class="text-2xl font-bold font-heading text-wellness-deep mt-1">Appel Découverte (15 min)</h3>
+                                    </div>
+                                    <div class="flex items-center text-muted-foreground space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        <span>15 min</span>
+                                    </div>
+                                    <p class="text-sm text-foreground/80 leading-relaxed">
+                                        Cet appel gratuit de 15 minutes est la première étape pour créer ensemble le soin qui vous correspond.
+                                    </p>
+                                    <div>
+                                        <p class="font-semibold text-wellness-deep mb-2">Objectif :</p>
+                                        <ul class="space-y-2 text-sm text-foreground/80">
+                                            <li class="flex items-start"><span class="mr-2">👉</span> Discuter de vos besoins et de vos attentes.</li>
+                                            <li class="flex items-start"><span class="mr-2">👉</span> Répondre à toutes vos questions.</li>
+                                            <li class="flex items-start"><span class="mr-2">👉</span> Valider ensemble si mon approche est bien adaptée à votre recherche de bien-être.</li>
+                                        </ul>
+                                    </div>
+                                    <p class="text-sm text-foreground/80 leading-relaxed pt-2">
+                                        C'est un échange simple, bienveillant et sans aucun engagement.
+                                    </p>
+                                    <p class="text-sm text-foreground/80 leading-relaxed">
+                                        J'ai hâte d'en apprendre plus sur vous et comment je peux vous accompagner !
+                                    </p>
+                                    <p class="text-sm text-foreground/80 pt-2">Élodie</p>
+                                </div>
+
+                                <!-- Right Panel: Calendar -->
+                                <div class="lg:col-span-3 p-8">
+                                    <h4 class="text-lg font-semibold text-wellness-deep mb-4">Sélectionnez la date et l'heure</h4>
+                                    
+                                    <!-- Calendar Controls -->
+                                    <div class="flex items-center justify-between mb-4">
+                                        <button class="p-2 rounded-full hover:bg-secondary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-gray-600"><path d="m15 18-6-6 6-6"></path></svg>
+                                        </button>
+                                        <div class="font-medium text-foreground">septembre 2025</div>
+                                        <button class="p-2 rounded-full hover:bg-secondary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-gray-600"><path d="m9 18 6-6-6-6"></path></svg>
+                                        </button>
+                                    </div>
+
+                                    <!-- Calendar Grid -->
+                                    <div class="grid grid-cols-7 gap-1 text-center text-sm">
+                                        <!-- Day Headers -->
+                                        <div class="text-muted-foreground font-medium py-2">LUN.</div>
+                                        <div class="text-muted-foreground font-medium py-2">MAR.</div>
+                                        <div class="text-muted-foreground font-medium py-2">MER.</div>
+                                        <div class="text-muted-foreground font-medium py-2">JEU.</div>
+                                        <div class="text-muted-foreground font-medium py-2">VEN.</div>
+                                        <div class="text-muted-foreground font-medium py-2">SAM.</div>
+                                        <div class="text-muted-foreground font-medium py-2">DIM.</div>
+
+                                        <!-- Dates -->
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">1</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">2</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">3</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">4</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-semibold">5</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">6</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">7</button></div>
+                                        
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">8</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">9</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">10</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">11</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">12</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">13</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">14</button></div>
+                                        
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">15</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">16</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-semibold">17</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-semibold">18</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-semibold">19</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">20</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">21</button></div>
+                                        
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">22</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">23</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">24</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">25</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">26</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">27</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">28</button></div>
+
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">29</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">30</button></div>
+                                    </div>
+
+                                    <!-- Timezone Selector -->
+                                    <div class="mt-8">
+                                        <p class="font-semibold text-sm mb-2">Fuseau horaire</p>
+                                        <div class="flex items-center space-x-2 text-sm text-foreground/80">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                            <span>Heure de l'Europe occidentale (12:26)</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m6 9 6 6 6-6"></path></svg>
                                         </div>
-                                        <button class="inline-flex items-center justify-center h-12 px-6 py-3 mt-6 rounded-lg text-sm font-medium hero-gradient text-primary-foreground wellness-shadow hover:glow-shadow transition-transform duration-300 hover:scale-105">Accéder au calendrier de réservation</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Calendly Widget End -->
+
                     </div>
                 </div>
             </section>
