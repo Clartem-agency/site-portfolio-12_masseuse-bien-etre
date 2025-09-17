@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
+    <!-- ScrollReveal CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <!-- Custom Tailwind Configuration -->
     <script>
     tailwind.config = {
@@ -143,7 +146,7 @@
                     
                     <!-- Mobile Menu Button (functionality not shown in video, so keeping it simple) -->
                     <button class="md:hidden transition-colors duration-300 text-white hover:bg-white/20 p-2 rounded-md">
-                        <svg xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
                     </button>
                 </div>
             </div>
@@ -198,7 +201,8 @@
                             </div>
                             <div class="order-1 lg:order-2">
                                 <div class="p-0 overflow-hidden soft-shadow rounded-lg border bg-card text-card-foreground shadow-sm">
-                                    <img src="images/elodie-portrait.webp" alt="Élodie Lambert, masseuse bien-être à Lyon" class="w-full h-auto object-cover">
+                                    <!-- MODIFICATION: Lazy Loading ajouté -->
+                                    <img src="images/elodie-portrait.webp" alt="Élodie Lambert, masseuse bien-être à Lyon" class="w-full h-auto object-cover" loading="lazy" decoding="async">
                                 </div>
                             </div>
                         </div>
@@ -339,7 +343,8 @@ Approach Section
                             <!-- Gallery Card 1 -->
                             <div class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden wellness-shadow hover:glow-shadow transition-all duration-500">
                                 <div class="aspect-[4/3] overflow-hidden">
-                                    <img src="images/salle-massage.webp" alt="Salle de massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <!-- MODIFICATION: Lazy Loading ajouté -->
+                                    <img src="images/salle-massage.webp" alt="Salle de massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                                 </div>
                                 <div class="p-6 text-center">
                                     <h3 class="text-lg font-heading text-wellness-deep mb-2">Salle de massage</h3>
@@ -349,7 +354,8 @@ Approach Section
                             <!-- Gallery Card 2 -->
                             <div class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden wellness-shadow hover:glow-shadow transition-all duration-500">
                                 <div class="aspect-[4/3] overflow-hidden">
-                                    <img src="images/soins-naturels-details.webp" alt="Détails des soins naturels et huiles de massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <!-- MODIFICATION: Lazy Loading ajouté -->
+                                    <img src="images/soins-naturels-details.webp" alt="Détails des soins naturels et huiles de massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                                 </div>
                                 <div class="p-6 text-center">
                                     <h3 class="text-lg font-heading text-wellness-deep mb-2">Soins naturels</h3>
@@ -359,7 +365,8 @@ Approach Section
                             <!-- Gallery Card 3 -->
                             <div class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden wellness-shadow hover:glow-shadow transition-all duration-500">
                                 <div class="aspect-[4/3] overflow-hidden">
-                                    <img src="images/espace-echange.webp" alt="Espace d'échange et de consultation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <!-- MODIFICATION: Lazy Loading ajouté -->
+                                    <img src="images/espace-echange.webp" alt="Espace d'échange et de consultation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                                 </div>
                                 <div class="p-6 text-center">
                                     <h3 class="text-lg font-heading text-wellness-deep mb-2">Espace d'échange</h3>
@@ -505,7 +512,8 @@ FAQ Section
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
                                 <!-- Left Panel: Information -->
                                 <div class="lg:col-span-2 p-8 border-r border-border flex flex-col space-y-4">
-                                    <img src="images/elodie-portrait.webp" alt="Portrait d'Élodie Lambert" class="w-24 h-24 rounded-full object-cover border-2 border-white shadow-md">
+                                    <!-- MODIFICATION: Lazy Loading ajouté -->
+                                    <img src="images/elodie-portrait.webp" alt="Portrait d'Élodie Lambert" class="w-24 h-24 rounded-full object-cover border-2 border-white shadow-md" loading="lazy" decoding="async">
                                     <div>
                                         <p class="font-medium text-muted-foreground">Élodie Lambert</p>
                                         <h3 class="text-2xl font-bold font-heading text-wellness-deep mt-1">Appel Découverte (15 min)</h3>
@@ -742,6 +750,7 @@ FAQ Section
             });
 
             // --- Smooth Scrolling for Anchor Links ---
+            // Votre code existant est parfait et conservé.
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -756,6 +765,7 @@ FAQ Section
             });
 
             // --- Accordion Functionality ---
+            // Votre code existant est parfait et conservé.
             const accordion = document.getElementById('faq-accordion');
             if (accordion) {
                 const triggers = accordion.querySelectorAll('.accordion-trigger');
@@ -786,6 +796,40 @@ FAQ Section
                     });
                 });
             }
+
+            // --- NOUVEAU: Scroll Reveal (Desktop Only) ---
+            const sr = ScrollReveal({
+                origin: 'bottom',
+                distance: '60px',
+                duration: 1000,
+                delay: 100,
+                reset: false, // Les animations ne se répètent pas au scroll inverse
+                mobile: false // IMPORTANT: Désactive les animations sur mobile (écrans < 768px)
+            });
+
+            // Animation des éléments de la section Hero
+            sr.reveal('#hero h1, #hero p, #hero .flex-col', { interval: 200 });
+
+            // Animation des titres de section
+            sr.reveal('h2', { delay: 200 });
+
+            // Animation de la section "À Propos"
+            sr.reveal('#apropos .space-y-6', { origin: 'left', distance: '80px' });
+            sr.reveal('#apropos .p-0', { origin: 'right', distance: '80px' });
+
+            // Animation des cartes avec un effet de décalage (stagger)
+            sr.reveal('#rituels .grid > div', { interval: 150 });
+            sr.reveal('#approche .grid > div', { interval: 150 });
+            sr.reveal('#univers .grid > div', { interval: 150 });
+            sr.reveal('#avis .grid > div', { interval: 150 });
+
+            // Animation des questions de la FAQ
+            sr.reveal('#faq-accordion > div', { interval: 100 });
+
+            // Animation des sections Réservation et Contact
+            sr.reveal('#reservation .rounded-lg', { duration: 1200 });
+            sr.reveal('#contact .lg\\:grid-cols-2 > div', { interval: 200 });
+
         });
     </script>
 </body>
