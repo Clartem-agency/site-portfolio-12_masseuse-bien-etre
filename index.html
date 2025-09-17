@@ -6,6 +6,9 @@
     <title>Cocon de Soi - Massages Bien-Être à Lyon | Élodie Lambert</title>
     <meta name="description" content="Découvrez les massages bien-être d'Élodie Lambert à Lyon. Un cocon de sérénité pour retrouver le chemin vers vous. Rituels personnalisés, approche bienveillante.">
     
+    <!-- Balise pour l'aperçu sur les réseaux sociaux -->
+    <meta property="og:image" content="images/apercu-partage-social.webp">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -13,6 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- ScrollReveal CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- Custom Tailwind Configuration -->
     <script>
@@ -56,7 +62,7 @@
             'glow-shadow': '0 0 25px -5px rgba(166, 106, 63, 0.4)',
           },
           backgroundImage: {
-            'hero-wellness': "url('https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3847841c-b26a-493a-86a0-a7d1883738e4/hero-wellness.jpg')",
+            'hero-wellness': "url('images/hero-background.webp')",
             'soft-gradient': 'linear-gradient(180deg, #fbfaf9 0%, #f7f5f2 100%)',
             'wellness-gradient': 'linear-gradient(180deg, #f7f5f2 0%, #ede0d4 100%)',
             'hero-gradient': 'linear-gradient(135deg, #a66a3f 0%, #c39a7b 100%)',
@@ -87,6 +93,10 @@
       .soft-gradient { background-image: linear-gradient(180deg, #fbfaf9 0%, #f7f5f2 100%); }
       .wellness-gradient { background-image: linear-gradient(180deg, #f7f5f2 0%, #ede0d4 100%); }
       .wellness-shadow { box-shadow: 0 4px 20px rgba(86, 60, 41, 0.1); }
+      /* Ajout de la classe pour l'image de fond du Hero */
+      .hero-bg {
+        background-image: url('images/hero-background.webp');
+      }
       .nav-scrolled {
         background-color: rgba(251, 250, 249, 0.85);
         backdrop-filter: blur(8px);
@@ -147,7 +157,7 @@
             Hero Section
             ================================================================== -->
             <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3847841c-b26a-493a-86a0-a7d1883738e4/hero-wellness.jpg');">
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat hero-bg">
                     <div class="absolute inset-0 bg-wellness-deep/40"></div>
                 </div>
                 <div class="relative z-10 container mx-auto px-6 text-center text-white">
@@ -191,7 +201,8 @@
                             </div>
                             <div class="order-1 lg:order-2">
                                 <div class="p-0 overflow-hidden soft-shadow rounded-lg border bg-card text-card-foreground shadow-sm">
-                                    <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/232a59a7-a3aa-44f2-a279-798c56e2978f/elodie-portrait.jpg" alt="Élodie Lambert, masseuse bien-être à Lyon" class="w-full h-auto object-cover">
+                                    <!-- MODIFICATION: Lazy Loading ajouté -->
+                                    <img src="images/elodie-portrait.webp" alt="Élodie Lambert, masseuse bien-être à Lyon" class="w-full h-auto object-cover" loading="lazy" decoding="async">
                                 </div>
                             </div>
                         </div>
@@ -272,51 +283,51 @@
                 </div>
             </section>
 
-            <!-- =================================================================
-            Approach Section
-            ================================================================== -->
-            <section id="approche" class="py-20 md:py-24 wellness-gradient">
-                <div class="container mx-auto px-6">
-                    <div class="max-w-6xl mx-auto">
-                        <div class="text-center mb-16">
-                            <h2 class="text-3xl md:text-5xl font-heading mb-6 text-wellness-deep">Votre Voyage, Pas à Pas</h2>
-                            <p class="text-lg text-foreground/70 max-w-3xl mx-auto">Parce que le premier pas est souvent le plus intimidant, je tiens à ce que vous sachiez exactement comment se déroule une séance. Chaque rencontre est un cheminement que nous faisons ensemble, dans un cadre bienveillant et structuré pour votre confort.</p>
-                        </div>
-                        <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-                            <!-- Step 1 -->
-                            <div class="rounded-lg border text-card-foreground shadow-sm bg-card/50 backdrop-blur-sm soft-shadow border-wellness-sage/20">
-                                <div class="p-6 text-center">
-                                    <div class="w-16 h-16 rounded-full hero-gradient flex items-center justify-center text-white text-2xl font-heading mx-auto mb-4 glow-shadow">1</div>
-                                    <h3 class="font-semibold tracking-tight text-xl font-heading text-wellness-deep">L'Accueil & L'Écoute</h3>
-                                </div>
-                                <div class="p-6 pt-0">
-                                    <p class="text-foreground/80 leading-relaxed text-center">Notre séance débute toujours par un temps d'échange confidentiel. Installée confortablement avec une tisane, vous pourrez déposer ce qui est présent pour vous : vos tensions, vos émotions, vos attentes. Cet instant précieux me permet de comprendre vos besoins uniques et d'adapter le soin pour qu'il soit parfaitement juste pour vous, aujourd'hui.</p>
-                                </div>
-                            </div>
-                            <!-- Step 2 -->
-                            <div class="rounded-lg border text-card-foreground shadow-sm bg-card/50 backdrop-blur-sm soft-shadow border-wellness-sage/20">
-                                <div class="p-6 text-center">
-                                    <div class="w-16 h-16 rounded-full hero-gradient flex items-center justify-center text-white text-2xl font-heading mx-auto mb-4 glow-shadow">2</div>
-                                    <h3 class="font-semibold tracking-tight text-xl font-heading text-wellness-deep">Le Cœur du Soin</h3>
-                                </div>
-                                <div class="p-6 pt-0">
-                                    <p class="text-foreground/80 leading-relaxed text-center">Vous vous installez ensuite sur la table de massage chauffée. Guidée par mon écoute et mon intuition, je déploie le massage. Vous n'avez rien à "faire", rien à "réussir". C'est un temps pour simplement recevoir, respirer, et laisser votre corps et votre esprit s'abandonner à la détente.</p>
-                                </div>
-                            </div>
-                            <!-- Step 3 -->
-                            <div class="rounded-lg border text-card-foreground shadow-sm bg-card/50 backdrop-blur-sm soft-shadow border-wellness-sage/20">
-                                <div class="p-6 text-center">
-                                    <div class="w-16 h-16 rounded-full hero-gradient flex items-center justify-center text-white text-2xl font-heading mx-auto mb-4 glow-shadow">3</div>
-                                    <h3 class="font-semibold tracking-tight text-xl font-heading text-wellness-deep">Le Retour en Douceur</h3>
-                                </div>
-                                <div class="p-6 pt-0">
-                                    <p class="text-foreground/80 leading-relaxed text-center">Après le massage, je vous laisse un temps d'intégration pour revenir à vous, tranquillement. Nous pouvons échanger brièvement sur vos ressentis si vous le souhaitez. Vous repartez apaisée, ressourcée, et reconnectée, prête à réintégrer votre quotidien avec plus de douceur.</p>
-                                </div>
-                            </div>
-                        </div>
+           <!-- =================================================================
+Approach Section
+================================================================== -->
+<section id="approche" class="py-20 md:py-24" style="background-image: linear-gradient(180deg, #f7f5f2 0%, #bfcfaf 100%);">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading mb-6 text-wellness-deep">Votre Voyage, Pas à Pas</h2>
+                <p class="text-lg text-foreground/70 max-w-3xl mx-auto">Parce que le premier pas est souvent le plus intimidant, je tiens à ce que vous sachiez exactement comment se déroule une séance. Chaque rencontre est un cheminement que nous faisons ensemble, dans un cadre bienveillant et structuré pour votre confort.</p>
+            </div>
+            <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="rounded-lg border text-card-foreground shadow-sm bg-card/50 backdrop-blur-sm soft-shadow border-wellness-sage/20">
+                    <div class="p-6 text-center">
+                        <div class="w-16 h-16 rounded-full hero-gradient flex items-center justify-center text-white text-2xl font-heading mx-auto mb-4 glow-shadow">1</div>
+                        <h3 class="font-semibold tracking-tight text-xl font-heading text-wellness-deep">L'Accueil & L'Écoute</h3>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <p class="text-foreground/80 leading-relaxed text-center">Notre séance débute toujours par un temps d'échange confidentiel. Installée confortablement avec une tisane, vous pourrez déposer ce qui est présent pour vous : vos tensions, vos émotions, vos attentes. Cet instant précieux me permet de comprendre vos besoins uniques et d'adapter le soin pour qu'il soit parfaitement juste pour vous, aujourd'hui.</p>
                     </div>
                 </div>
-            </section>
+                <!-- Step 2 -->
+                <div class="rounded-lg border text-card-foreground shadow-sm bg-card/50 backdrop-blur-sm soft-shadow border-wellness-sage/20">
+                    <div class="p-6 text-center">
+                        <div class="w-16 h-16 rounded-full hero-gradient flex items-center justify-center text-white text-2xl font-heading mx-auto mb-4 glow-shadow">2</div>
+                        <h3 class="font-semibold tracking-tight text-xl font-heading text-wellness-deep">Le Cœur du Soin</h3>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <p class="text-foreground/80 leading-relaxed text-center">Vous vous installez ensuite sur la table de massage chauffée. Guidée par mon écoute et mon intuition, je déploie le massage. Vous n'avez rien à "faire", rien à "réussir". C'est un temps pour simplement recevoir, respirer, et laisser votre corps et votre esprit s'abandonner à la détente.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="rounded-lg border text-card-foreground shadow-sm bg-card/50 backdrop-blur-sm soft-shadow border-wellness-sage/20">
+                    <div class="p-6 text-center">
+                        <div class="w-16 h-16 rounded-full hero-gradient flex items-center justify-center text-white text-2xl font-heading mx-auto mb-4 glow-shadow">3</div>
+                        <h3 class="font-semibold tracking-tight text-xl font-heading text-wellness-deep">Le Retour en Douceur</h3>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <p class="text-foreground/80 leading-relaxed text-center">Après le massage, je vous laisse un temps d'intégration pour revenir à vous, tranquillement. Nous pouvons échanger brièvement sur vos ressentis si vous le souhaitez. Vous repartez apaisée, ressourcée, et reconnectée, prête à réintégrer votre quotidien avec plus de douceur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
             <!-- =================================================================
             Gallery Section
@@ -332,7 +343,8 @@
                             <!-- Gallery Card 1 -->
                             <div class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden wellness-shadow hover:glow-shadow transition-all duration-500">
                                 <div class="aspect-[4/3] overflow-hidden">
-                                    <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3a79f046-6085-484a-9310-d021f1519d08/massage-room.jpg" alt="Salle de massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <!-- MODIFICATION: Lazy Loading ajouté -->
+                                    <img src="images/salle-massage.webp" alt="Salle de massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                                 </div>
                                 <div class="p-6 text-center">
                                     <h3 class="text-lg font-heading text-wellness-deep mb-2">Salle de massage</h3>
@@ -342,7 +354,8 @@
                             <!-- Gallery Card 2 -->
                             <div class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden wellness-shadow hover:glow-shadow transition-all duration-500">
                                 <div class="aspect-[4/3] overflow-hidden">
-                                    <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c1775e5f-1463-4903-b09e-7169f1025537/massage-details.jpg" alt="Soins naturels" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <!-- MODIFICATION: Lazy Loading ajouté -->
+                                    <img src="images/soins-naturels-details.webp" alt="Détails des soins naturels et huiles de massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                                 </div>
                                 <div class="p-6 text-center">
                                     <h3 class="text-lg font-heading text-wellness-deep mb-2">Soins naturels</h3>
@@ -352,7 +365,8 @@
                             <!-- Gallery Card 3 -->
                             <div class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden wellness-shadow hover:glow-shadow transition-all duration-500">
                                 <div class="aspect-[4/3] overflow-hidden">
-                                    <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/016e788c-9824-4f08-b769-93e130282121/consultation-area.jpg" alt="Espace d'échange" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <!-- MODIFICATION: Lazy Loading ajouté -->
+                                    <img src="images/espace-echange.webp" alt="Espace d'échange et de consultation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                                 </div>
                                 <div class="p-6 text-center">
                                     <h3 class="text-lg font-heading text-wellness-deep mb-2">Espace d'échange</h3>
@@ -413,98 +427,198 @@
             </section>
 
             <!-- =================================================================
-            FAQ Section
-            ================================================================== -->
-            <section id="faq" class="py-20 md:py-24 wellness-gradient">
-                <div class="container mx-auto px-6">
-                    <div class="max-w-4xl mx-auto">
-                        <div class="text-center mb-16">
-                            <h2 class="text-3xl md:text-5xl font-heading mb-6 text-wellness-deep">Vos Questions, Mes Réponses Bienveillantes</h2>
-                        </div>
-                        <div id="faq-accordion" class="space-y-4">
-                            <!-- FAQ Item 1 -->
-                            <div class="bg-card/50 backdrop-blur-sm rounded-lg px-6 border border-wellness-sage/20 soft-shadow">
-                                <h3 class="flex">
-                                    <button class="accordion-trigger flex flex-1 items-center justify-between py-4 transition-all text-left text-lg font-medium text-wellness-deep hover:no-underline hover:text-primary">
-                                        Je n'ai jamais reçu de massage bien-être, est-ce que c'est pour moi ?
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
-                                    </button>
-                                </h3>
-                                <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0px;">
-                                    <div class="text-foreground/80 leading-relaxed pb-6 pt-0">Absolument. La plupart des personnes que j'accompagne découvrent cet univers pour la première fois. Il n'y a aucun prérequis, si ce n'est l'envie de vous accorder un moment. Mon rôle est de vous guider avec douceur, d'être à l'écoute de vos limites et de créer un cadre où vous vous sentirez parfaitement en sécurité.</div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item 2 -->
-                            <div class="bg-card/50 backdrop-blur-sm rounded-lg px-6 border border-wellness-sage/20 soft-shadow">
-                                <h3 class="flex">
-                                    <button class="accordion-trigger flex flex-1 items-center justify-between py-4 transition-all text-left text-lg font-medium text-wellness-deep hover:no-underline hover:text-primary">
-                                        Faut-il se déshabiller complètement ?
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
-                                    </button>
-                                </h3>
-                                <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0px;">
-                                    <div class="text-foreground/80 leading-relaxed pb-6 pt-0">Votre confort est ma priorité absolue. Pour les massages à l'huile, vous êtes en sous-vêtements. Les parties du corps qui ne sont pas massées sont toujours recouvertes d'un drap doux et chaud, garantissant votre intimité et votre chaleur tout au long du soin.</div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item 3 -->
-                            <div class="bg-card/50 backdrop-blur-sm rounded-lg px-6 border border-wellness-sage/20 soft-shadow">
-                                <h3 class="flex">
-                                    <button class="accordion-trigger flex flex-1 items-center justify-between py-4 transition-all text-left text-lg font-medium text-wellness-deep hover:no-underline hover:text-primary">
-                                        Y a-t-il des contre-indications au massage bien-être ?
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
-                                    </button>
-                                </h3>
-                                <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0px;">
-                                    <div class="text-foreground/80 leading-relaxed pb-6 pt-0">C'est une excellente question qui témoigne de votre prudence. En effet, il existe certaines contre-indications (fièvre, inflammation, phlébite...). C'est pourquoi notre temps d'échange initial est si important. Nous ferons le point ensemble sur votre état de santé pour nous assurer que le soin est parfaitement adapté et bénéfique pour vous. En cas de doute, l'avis de votre médecin traitant est toujours recommandé.</div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item 4 -->
-                            <div class="bg-card/50 backdrop-blur-sm rounded-lg px-6 border border-wellness-sage/20 soft-shadow">
-                                <h3 class="flex">
-                                    <button class="accordion-trigger flex flex-1 items-center justify-between py-4 transition-all text-left text-lg font-medium text-wellness-deep hover:no-underline hover:text-primary">
-                                        Est-il possible d'offrir un soin en cadeau ?
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
-                                    </button>
-                                </h3>
-                                <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0px;">
-                                    <div class="text-foreground/80 leading-relaxed pb-6 pt-0">Oui, bien sûr ! Offrir un temps pour soi est l'un des plus beaux cadeaux. Je propose des cartes cadeaux personnalisées pour le rituel de votre choix. N'hésitez pas à me contacter directement par email ou téléphone pour en discuter.</div>
-                                </div>
-                            </div>
-                        </div>
+FAQ Section
+================================================================== -->
+<section id="faq" class="py-20 md:py-24" style="background-image: linear-gradient(180deg, #f7f5f2 0%, #bfcfaf 100%);">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading mb-6 text-wellness-deep">Vos Questions, Mes Réponses Bienveillantes</h2>
+            </div>
+            <div id="faq-accordion" class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-card/50 backdrop-blur-sm rounded-lg px-6 border border-wellness-sage/20 soft-shadow">
+                    <h3 class="flex">
+                        <button class="accordion-trigger flex flex-1 items-center justify-between py-4 transition-all text-left text-lg font-medium text-wellness-deep hover:no-underline hover:text-primary">
+                            Je n'ai jamais reçu de massage bien-être, est-ce que c'est pour moi ?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                    </h3>
+                    <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0px;">
+                        <div class="text-foreground/80 leading-relaxed pb-6 pt-0">Absolument. La plupart des personnes que j'accompagne découvrent cet univers pour la première fois. Il n'y a aucun prérequis, si ce n'est l'envie de vous accorder un moment. Mon rôle est de vous guider avec douceur, d'être à l'écoute de vos limites et de créer un cadre où vous vous sentirez parfaitement en sécurité.</div>
                     </div>
                 </div>
-            </section>
+                <!-- FAQ Item 2 -->
+                <div class="bg-card/50 backdrop-blur-sm rounded-lg px-6 border border-wellness-sage/20 soft-shadow">
+                    <h3 class="flex">
+                        <button class="accordion-trigger flex flex-1 items-center justify-between py-4 transition-all text-left text-lg font-medium text-wellness-deep hover:no-underline hover:text-primary">
+                            Faut-il se déshabiller complètement ?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                    </h3>
+                    <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0px;">
+                        <div class="text-foreground/80 leading-relaxed pb-6 pt-0">Votre confort est ma priorité absolue. Pour les massages à l'huile, vous êtes en sous-vêtements. Les parties du corps qui ne sont pas massées sont toujours recouvertes d'un drap doux et chaud, garantissant votre intimité et votre chaleur tout au long du soin.</div>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-card/50 backdrop-blur-sm rounded-lg px-6 border border-wellness-sage/20 soft-shadow">
+                    <h3 class="flex">
+                        <button class="accordion-trigger flex flex-1 items-center justify-between py-4 transition-all text-left text-lg font-medium text-wellness-deep hover:no-underline hover:text-primary">
+                            Y a-t-il des contre-indications au massage bien-être ?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                    </h3>
+                    <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0px;">
+                        <div class="text-foreground/80 leading-relaxed pb-6 pt-0">C'est une excellente question qui témoigne de votre prudence. En effet, il existe certaines contre-indications (fièvre, inflammation, phlébite...). C'est pourquoi notre temps d'échange initial est si important. Nous ferons le point ensemble sur votre état de santé pour nous assurer que le soin est parfaitement adapté et bénéfique pour vous. En cas de doute, l'avis de votre médecin traitant est toujours recommandé.</div>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="bg-card/50 backdrop-blur-sm rounded-lg px-6 border border-wellness-sage/20 soft-shadow">
+                    <h3 class="flex">
+                        <button class="accordion-trigger flex flex-1 items-center justify-between py-4 transition-all text-left text-lg font-medium text-wellness-deep hover:no-underline hover:text-primary">
+                            Est-il possible d'offrir un soin en cadeau ?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                    </h3>
+                    <div class="accordion-content overflow-hidden text-sm transition-all" style="max-height: 0px;">
+                        <div class="text-foreground/80 leading-relaxed pb-6 pt-0">Oui, bien sûr ! Offrir un temps pour soi est l'un des plus beaux cadeaux. Je propose des cartes cadeaux personnalisées pour le rituel de votre choix. N'hésitez pas à me contacter directement par email ou téléphone pour en discuter.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <!-- =================================================================
+                        <!-- =================================================================
             Booking Section
             ================================================================== -->
             <section id="reservation" class="py-20 md:py-24 soft-gradient">
                 <div class="container mx-auto px-6">
-                    <div class="max-w-4xl mx-auto">
+                    <div class="max-w-5xl mx-auto">
                         <div class="text-center mb-16">
-                            <h2 class="text-3xl md:text-5xl font-heading mb-6 text-wellness-deep">C'est le moment de vous offrir cette pause</h2>
-                            <p class="text-lg text-muted-foreground max-w-3xl mx-auto">Réserver votre rituel n'a jamais été aussi simple. Choisissez simplement le soin et le créneau qui vous conviennent dans l'agenda ci-dessous. Vous recevrez une confirmation instantanément.</p>
+                            <h2 class="text-3xl md:text-5xl font-heading mb-6 text-wellness-deep">Prête à faire le premier pas ?</h2>
+                            <p class="text-lg text-muted-foreground max-w-3xl mx-auto">Je vous offre un appel découverte de 15 minutes pour échanger en toute sérénité. C'est l'occasion de faire connaissance, de poser vos questions et de voir ensemble comment je peux vous accompagner. C'est simple, gratuit et sans engagement.</p>
                         </div>
-                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm wellness-shadow">
-                            <div class="p-6 text-center bg-wellness-gradient rounded-t-lg">
-                                <h3 class="font-semibold tracking-tight text-2xl font-heading text-wellness-deep">Réservation en ligne</h3>
+                        
+                        <!-- Calendly Widget Start -->
+                        <div class="rounded-lg border bg-card text-card-foreground shadow-sm wellness-shadow overflow-hidden relative">
+                            <!-- Calendly Badge -->
+                            <div class="absolute top-2 -right-10 z-10">
+                                <div class="w-32 h-8 bg-gray-800 flex items-center justify-center transform rotate-45">
+                                    <span class="text-white text-xs font-bold tracking-wider">Calendly</span>
+                                </div>
                             </div>
-                            <div class="p-8">
-                                <div class="bg-wellness-warm/10 rounded-lg p-8 md:p-12 text-center border-2 border-dashed border-wellness-sage/50">
-                                    <div class="space-y-4">
-                                        <div class="text-4xl">📅</div>
-                                        <h3 class="text-xl font-medium text-wellness-deep">Calendrier de réservation</h3>
-                                        <p class="text-foreground/70">L'agenda Calendly sera intégré ici pour permettre la réservation directe en ligne.</p>
-                                        <div class="space-y-3 text-sm text-left max-w-md mx-auto pt-4">
-                                            <div class="flex justify-between"><span class="text-foreground/80">Rituel "Cocon de Soi" (1h15)</span><span class="font-medium text-wellness-deep">90€</span></div>
-                                            <div class="flex justify-between"><span class="text-foreground/80">Pause "Sérénité" (45min)</span><span class="font-medium text-wellness-deep">60€</span></div>
-                                            <div class="flex justify-between"><span class="text-foreground/80">Rituel Pré-Natal (1h)</span><span class="font-medium text-wellness-deep">80€</span></div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+                                <!-- Left Panel: Information -->
+                                <div class="lg:col-span-2 p-8 border-r border-border flex flex-col space-y-4">
+                                    <!-- MODIFICATION: Lazy Loading ajouté -->
+                                    <img src="images/elodie-portrait.webp" alt="Portrait d'Élodie Lambert" class="w-24 h-24 rounded-full object-cover border-2 border-white shadow-md" loading="lazy" decoding="async">
+                                    <div>
+                                        <p class="font-medium text-muted-foreground">Élodie Lambert</p>
+                                        <h3 class="text-2xl font-bold font-heading text-wellness-deep mt-1">Appel Découverte (15 min)</h3>
+                                    </div>
+                                    <div class="flex items-center text-muted-foreground space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        <span>15 min</span>
+                                    </div>
+                                    <p class="text-sm text-foreground/80 leading-relaxed">
+                                        Cet appel gratuit de 15 minutes est la première étape pour créer ensemble le soin qui vous correspond.
+                                    </p>
+                                    <div>
+                                        <p class="font-semibold text-wellness-deep mb-2">Objectif :</p>
+                                        <ul class="space-y-2 text-sm text-foreground/80">
+                                            <li class="flex items-start"><span class="mr-2">👉</span> Discuter de vos besoins et de vos attentes.</li>
+                                            <li class="flex items-start"><span class="mr-2">👉</span> Répondre à toutes vos questions.</li>
+                                            <li class="flex items-start"><span class="mr-2">👉</span> Valider ensemble si mon approche est bien adaptée à votre recherche de bien-être.</li>
+                                        </ul>
+                                    </div>
+                                    <p class="text-sm text-foreground/80 leading-relaxed pt-2">
+                                        C'est un échange simple, bienveillant et sans aucun engagement.
+                                    </p>
+                                    <p class="text-sm text-foreground/80 leading-relaxed">
+                                        J'ai hâte d'en apprendre plus sur vous et comment je peux vous accompagner !
+                                    </p>
+                                    <p class="text-sm text-foreground/80 pt-2">Élodie</p>
+                                </div>
+
+                                <!-- Right Panel: Calendar -->
+                                <div class="lg:col-span-3 p-8">
+                                    <h4 class="text-lg font-semibold text-wellness-deep mb-4">Sélectionnez la date et l'heure</h4>
+                                    
+                                    <!-- Calendar Controls -->
+                                    <div class="flex items-center justify-between mb-4">
+                                        <button class="p-2 rounded-full hover:bg-secondary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-gray-600"><path d="m15 18-6-6 6-6"></path></svg>
+                                        </button>
+                                        <div class="font-medium text-foreground">septembre 2025</div>
+                                        <button class="p-2 rounded-full hover:bg-secondary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-gray-600"><path d="m9 18 6-6-6-6"></path></svg>
+                                        </button>
+                                    </div>
+
+                                    <!-- Calendar Grid -->
+                                    <div class="grid grid-cols-7 gap-1 text-center text-sm">
+                                        <!-- Day Headers -->
+                                        <div class="text-muted-foreground font-medium py-2">LUN.</div>
+                                        <div class="text-muted-foreground font-medium py-2">MAR.</div>
+                                        <div class="text-muted-foreground font-medium py-2">MER.</div>
+                                        <div class="text-muted-foreground font-medium py-2">JEU.</div>
+                                        <div class="text-muted-foreground font-medium py-2">VEN.</div>
+                                        <div class="text-muted-foreground font-medium py-2">SAM.</div>
+                                        <div class="text-muted-foreground font-medium py-2">DIM.</div>
+
+                                        <!-- Dates -->
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">1</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">2</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">3</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">4</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-semibold">5</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">6</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">7</button></div>
+                                        
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">8</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">9</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">10</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">11</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">12</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">13</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">14</button></div>
+                                        
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">15</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">16</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-semibold">17</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-semibold">18</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-semibold">19</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">20</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">21</button></div>
+                                        
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">22</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">23</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">24</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">25</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">26</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">27</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400">28</button></div>
+
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">29</button></div>
+                                        <div class="py-2"><button class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-semibold">30</button></div>
+                                    </div>
+
+                                    <!-- Timezone Selector -->
+                                    <div class="mt-8">
+                                        <p class="font-semibold text-sm mb-2">Fuseau horaire</p>
+                                        <div class="flex items-center space-x-2 text-sm text-foreground/80">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                            <span>Heure de l'Europe occidentale (12:26)</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m6 9 6 6 6-6"></path></svg>
                                         </div>
-                                        <button class="inline-flex items-center justify-center h-12 px-6 py-3 mt-6 rounded-lg text-sm font-medium hero-gradient text-primary-foreground wellness-shadow hover:glow-shadow transition-transform duration-300 hover:scale-105">Accéder au calendrier de réservation</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Calendly Widget End -->
+
                     </div>
                 </div>
             </section>
@@ -636,6 +750,7 @@
             });
 
             // --- Smooth Scrolling for Anchor Links ---
+            // Votre code existant est parfait et conservé.
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -650,6 +765,7 @@
             });
 
             // --- Accordion Functionality ---
+            // Votre code existant est parfait et conservé.
             const accordion = document.getElementById('faq-accordion');
             if (accordion) {
                 const triggers = accordion.querySelectorAll('.accordion-trigger');
@@ -680,6 +796,40 @@
                     });
                 });
             }
+
+            // --- NOUVEAU: Scroll Reveal (Desktop Only) ---
+            const sr = ScrollReveal({
+                origin: 'bottom',
+                distance: '60px',
+                duration: 1000,
+                delay: 100,
+                reset: false, // Les animations ne se répètent pas au scroll inverse
+                mobile: false // IMPORTANT: Désactive les animations sur mobile (écrans < 768px)
+            });
+
+            // Animation des éléments de la section Hero
+            sr.reveal('#hero h1, #hero p, #hero .flex-col', { interval: 200 });
+
+            // Animation des titres de section
+            sr.reveal('h2', { delay: 200 });
+
+            // Animation de la section "À Propos"
+            sr.reveal('#apropos .space-y-6', { origin: 'left', distance: '80px' });
+            sr.reveal('#apropos .p-0', { origin: 'right', distance: '80px' });
+
+            // Animation des cartes avec un effet de décalage (stagger)
+            sr.reveal('#rituels .grid > div', { interval: 150 });
+            sr.reveal('#approche .grid > div', { interval: 150 });
+            sr.reveal('#univers .grid > div', { interval: 150 });
+            sr.reveal('#avis .grid > div', { interval: 150 });
+
+            // Animation des questions de la FAQ
+            sr.reveal('#faq-accordion > div', { interval: 100 });
+
+            // Animation des sections Réservation et Contact
+            sr.reveal('#reservation .rounded-lg', { duration: 1200 });
+            sr.reveal('#contact .lg\\:grid-cols-2 > div', { interval: 200 });
+
         });
     </script>
 </body>
